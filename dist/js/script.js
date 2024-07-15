@@ -5,16 +5,18 @@ window.onscroll = function () {
   const fixedNav = header.offsetTop;
 
   if (window.scrollY > fixedNav) {
-    header.classList.add("nav-fixed");
+    header.classList.add("navbar-fixed");
   } else {
-    header.classList.remove("nav-fixed");
+    header.classList.remove("navbar-fixed");
   }
 };
 
 // Hamburger
 
 const hamburger = document.querySelector("#hamburger");
+const navMenu = document.querySelector("#nav-menu");
 
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("hamburger-active");
+  navMenu.classList.toggle("hidden");
 });
